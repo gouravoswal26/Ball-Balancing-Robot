@@ -1,0 +1,19 @@
+# Core control stack
+numpy>=1.21
+opencv-python>=4.5
+
+# PCA9685 driver (Raspberry Pi)
+adafruit-circuitpython-pca9685
+adafruit-blinka
+
+# Testing
+pytest>=7.0
+
+# NOTE on Picamera2: it is NOT installed via this file. On Raspberry Pi
+# OS (Bullseye or later) it ships as a system package and should be
+# installed with:
+#   sudo apt update && sudo apt install -y python3-picamera2
+# It depends on libcamera and other system libraries that generally
+# don't work well when pip-installed into an isolated venv. If you do
+# use a virtualenv for this project, create it with
+# --system-site-packages so it can see the system Picamera2 install.
